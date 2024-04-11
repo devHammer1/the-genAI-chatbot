@@ -15,7 +15,7 @@ openai = OpenAI(
 
 app = FastAPI()
 
-templates = Jinja2Templates(directory = "../templates")
+templates = Jinja2Templates(directory = "templates")
 
 chat_responses = []
 
