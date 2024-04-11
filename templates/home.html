@@ -43,6 +43,7 @@
         var sendButton = document.getElementById("sendButton");
         var userInput = document.getElementById("userInput");
         var chatHistory = document.getElementById("chatHistory");
+        var clearChatButton = document.getElementById("clear-chat-btn"); // Get the clear chat button element
         var lastUserMessageDiv = null; // Keep track of the last user message div
         var isNewUserInput = true; // Flag to track when a new user input happens
 
@@ -86,6 +87,14 @@
             lastUserMessageDiv = null; // Prepare for the next message
           }
         };
+
+        clearChatButton.addEventListener("click", function() {
+        // Clear the chat_responses list on the client-side
+        chatHistory.innerHTML = ""; // Remove all existing messages from the chat history
+
+        // Simulate a page refresh to clear server-side data (if applicable)
+        window.location.href = "/";
+    });
     </script>
 <div class="credit-line">
   Developed with &#10084 by Turanya Sharma
