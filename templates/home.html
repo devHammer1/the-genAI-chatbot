@@ -9,9 +9,9 @@
         <div class="card text-center mt-3">
             <div class="card-header">
                 Chat History:
+                <button type="button" class="btn btn-sm btn-outline-danger float-right" id="clear-chat-btn">Clear Chat</button>
             </div>
-            <div class="card-body chat-history" id="chatHistory">
-                <!-- auto populate here -->
+             <div class="card-body chat-history" id="chatHistory">
                 {% for response in chat_responses %}
 
                 <div class = "{{ 'chat-message user-input' if loop.index0 is even else 'chat-message ai-response' }}">
