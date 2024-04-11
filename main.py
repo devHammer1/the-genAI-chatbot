@@ -17,16 +17,16 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory = "templates")
 
-chat_responses = []
-
 @app.get("/", response_class = HTMLResponse)
 async def chat_page(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request, "chat_responses": chat_responses})
+    return templates.TemplateResponse("home.html", {"request": request})
 
 chat_log = [{
     "role": "system",
     "content": "You are a helpful assistant."
 }]
+
+chat_responses = []
 
 @app.websocket("/ws")
 async def chat(websocket: WebSocket):
