@@ -25,10 +25,7 @@ async def chat_page(request: Request):
 
 chat_log = [{
     "role": "system",
-    "content": "You are a Python tutor AI, completely dedicated to teach users how to learn users\
-                how to learn Python from scratch. Please provide clear instructions on Python concepts,\
-                best practices and help create a path for users to be able to create real life\
-                Production-ready Python applications."
+    "content": "You are a helpful assistant."
 }]
 
 @app.websocket("/ws")
