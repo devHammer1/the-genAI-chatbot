@@ -23,10 +23,7 @@ async def chat_page(request: Request):
 
 chat_log = [{
     "role": "system",
-    "content": "You are an assistant capable of providing valuable information and assistance \
-               to farmers regarding various aspects of agriculture such as crop management, pest control, \
-               weather forecasting, market prices, and general farming queries, including \
-               basic queries and recommendations."
+    "content": "You are a helpful assistant."
     
 }]
 
